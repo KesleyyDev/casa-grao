@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Sorts Mill Goudy";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/sorts-mill-goudy-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Sorts Mill Goudy";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/sorts-mill-goudy-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Asap";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/asap-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Asap";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/asap-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Asap";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/asap-latin-600-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Asap";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/asap-latin-ext-600-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  --cafe: #4b3025;
+  --cafe-fundo: #412413;
+  --cafe-veio: #210909;
+  --creme: #f5ebdd;
+  --creme-tinta: #f6e9d7;
+  --oliva: #78866b;
+  /* oliva escurecido pra passar 4.5:1 sobre o pano (#ece0d1) */
+  --oliva-tinta: #55573a;
+  --tinta-pano: #2b140b;
+  /* painel: queda em relação ao período anterior; fundo de campo de formulário */
+  --ferrugem: #8a3a20;
+  --creme-claro: #fbf4ea;
+
+  /* serifa de livro: a Goudy clássica, um peso só */
+  --serif: "Sorts Mill Goudy", Georgia, serif;
+  --sans: "Asap", system-ui, sans-serif;
+
+  /* 1 unidade do comp (768px de largura) na largura atual */
+  --u: calc(100vw / 768);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--cafe) var(--creme);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--creme) url("/plates/clean-cloth.jpg") repeat;
+  /* tile de 2080px sem emenda, desenhado em 1040px */
+  background-size: 1040px 1040px;
+  color: var(--tinta-pano);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--cafe);
+  color: var(--creme);
+}
+
+:focus-visible {
+  outline: 3px solid var(--cafe);
+  outline-offset: 4px;
+}
+
+a {
+  color: inherit;
+}
